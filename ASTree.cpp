@@ -199,6 +199,15 @@ PycRef<ASTNode> BuildFromCode(PycRef<PycCode> code, PycModule* mod)
         case Pyc::INPLACE_SUBTRACT:
         case Pyc::INPLACE_TRUE_DIVIDE:
         case Pyc::INPLACE_XOR:
+        case Pyc::JUMP_IF_NOT_EXC_MATCH_A:
+        case Pyc::RERAISE:
+        case Pyc::DICT_MERGE_A:
+        case Pyc::MAP_ADD_A:
+        case Pyc::DICT_UPDATE_A:
+        case Pyc::CALL_FUNCTION_EX_A:
+        case Pyc::SET_ADD_A:
+        case Pyc::UNPACK_EX_A:
+        case Pyc::LIST_TO_TUPLE:
         case Pyc::INPLACE_MATRIX_MULTIPLY:
             {
                 ASTBinary::BinOp op = ASTBinary::from_opcode(opcode);
